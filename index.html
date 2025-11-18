@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeWithMuzammil - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(145deg, #222, #000);
+    }
+    .hero-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid gold;
+      object-fit: cover;
+      animation: pulse 4s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .intro {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin: 3rem 0 1rem;
+      text-align: center;
+      color: gold;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .project-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover .project-img {
+      transform: translateX(-100%);
+    }
+    .project-card:hover .project-info {
+      transform: translateY(0);
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .team-member {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+      background: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background: #1b1b1b;
+      border-radius: 12px;
+    }
+    form input, form textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: none;
+      background: #2a2a2a;
+      color: white;
+    }
+    form button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      background: gold;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #e5c100;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG-20231209-WA0024.jpg" alt="Muzammil" class="hero-img" />
+    <div class="intro">
+      <h1>Hi, I’m Muzammil</h1>
+      <p>I build innovative, responsive websites that bring ideas to life. Welcome to CodeWithMuzammil!</p>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">My Products </h2>
+    <div class="projects">
+     
+      <div class="project-card">
+        <img src="download (1).jpeg" alt="Project 1" class="project-img" />
+        <div class="project-info">
+          <h3>Rolex Watch</h3>
+          <p>$10</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (2).jpeg" alt="Project 2" class="project-img" />
+        <div class="project-info">
+          <h3>BiCycle</h3>
+          <p>$25</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (3).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>BiCycle</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (2).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Mobile Phone</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="AIR+MAX+PLUS (1).avif" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>nike shoes</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (4).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Ring</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (5).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Braslate</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (6).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (7).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (8).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (9).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images (3).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Mobile Phones</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download.jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Rolex Watch</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (4).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>BiCycle</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (5).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Mobile Phones</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="AIR+MAX+PLUS.avif" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Nike Shoes</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (7).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Mobile Phones</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (8).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Ring</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (9).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Ring</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (10).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Ring</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (11).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Ring</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (12).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Ring</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (13).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (14).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (15).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (16).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>BiCycle</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (17).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (18).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>BiCycle</h3>
+          <p>$30</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="download (19).jpeg" alt="Project 3" class="project-img" />
+        <div class="project-info">
+          <h3>Hand Bag</h3>
+          <p>$30</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Our Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <h3>John Doe</h3>
+        <p>Frontend Developer</p>
+      </div>
+      <div class="team-member">
+        <h3>Muzammil Pervaiz</h3>
+        <p>Backend Engineer</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 CodeWithMuzammil. All rights reserved.
+  </footer>
+</body>
+</html>
